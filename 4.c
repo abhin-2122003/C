@@ -10,5 +10,8 @@ void main(){
     printf("\nEnter the value for radius of the  circle : ");
     scanf("%f",&r);
 
-    printf("\nArea of the circle : %.2f \nPerimeter of the circle : %.2f\n\n", (pi*r*r),(pi*2*r));
+    float a = pi*r*r;
+    float p = pi*2*r;
+
+    printf("\nArea of the circle : %.2f \nPerimeter of the circle : %.2f\n\n", a,p);
 }
