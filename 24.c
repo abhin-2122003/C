@@ -7,24 +7,30 @@ void main(){
     float a,b,c;
     printf("\nEnter the marks of the student - ");
 
-    printf("\nSUB 1 : ");
+    printf("\nSUB 1(in 30) : ");
     scanf("%f",&a);
-    printf("\nSUB 2 : ");
+    printf("\nSUB 2(in 30) : ");
     scanf("%f",&b);
-    printf("\nSUB 3 : ");
+    printf("\nSUB 3(in 30) : ");
     scanf("%f",&c);
 
-    if(a<30 || b<30 || c<30){
-        printf("\nE Grade , Failed");
-    }else if(a>30 && b>30 && c>30){
-        printf("\nD Grade\n");
-    }else if(a>40 && b >40 && c>40){
-        printf("\nC Grade\n");
-    }else if(a>50 && b>50 && c>50){
-        printf("\nB Grade");
-    }else if(a == 80 && b ==80 && c ==80){
-        printf("\nA Grade , Full Marks");
+    float total = a+b+c;
+
+    if(a>=10 || b>=10 || c>=10){
+        if(total<20){
+            printf("\nD Grade\n");
+        }else if(total<30){
+            printf("\nC Grade\n");
+        }else if(total<50){
+            printf("\nB Grade");
+        }else if(total <70){
+            printf("\nA Grade");
+        }else if(total <90){
+            printf("\nA+ Grade");
+        }else{
+            printf("\nInvalid Mark entry");
+        }
     }else{
-        printf("\nInvalid Mark entry");
+        printf("\nFailed ...!");
     }
 }
