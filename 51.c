@@ -3,6 +3,16 @@
 
 #include<stdio.h>
 
+int factorial(int n){
+    int fact;
+    if(n<=1){
+        return 1;
+    }else{
+        fact = n*factorial(n-1);
+    }
+    return fact;
+}
+
 void main(){
 
     float x ; int n;
@@ -14,10 +24,12 @@ void main(){
     float num = x;
     float den = 1;
 
+    int factorial(int);
+
     for(int i =1 ;i<n;i++){
 
-        num = num*x*x;
-        den *= 2*i*(2*i+1);
+        num = num*x;
+        den = factorial(2*i);
         sum += num/den;
     }
 
