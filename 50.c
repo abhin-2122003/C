@@ -18,11 +18,11 @@ void main(){
     for(int i=1;i<n;i++){
 
         num = -num*x*x;
-        den *= 2*i*(2*(i+1));
+        den *= 2*i*(2*i+1);
         sum += num / den;
 
     }
 
-    printf("\nSum : %.2f",sum);
+    printf("\nSum : %.4f",sum);
 
 }
