@@ -2,6 +2,7 @@
 // S= X-X3/3 !+X5/5!-X7/7 !.......
 
 #include<stdio.h>
+#include<math.h>
 
 void main(){
 
@@ -17,8 +18,8 @@ void main(){
 
     for(int i=1;i<n;i++){
 
-        num = -num*x*x;
-        den *= 2*i*(2*i+1);
+        num  = -num*x*x;
+        den *= 2*i*(2*i+i);
         sum += num / den;
 
     }
